@@ -93,3 +93,6 @@ Pull docker package
 ========================
 docker pull httpd:2.4
 
+save image to local file
+========================== 
+docker save httpd > docker.httpd.image
