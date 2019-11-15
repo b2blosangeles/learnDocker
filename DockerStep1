@@ -70,7 +70,10 @@ docker save phpmyadmin/phpmyadmin > docker.phpmyadmin.image
 
 docker image load from file
 =============================
+1. mysql 
 docker image load -i docker.mysql.image
+2. phpmyadmin
+docker image load -i docker.phpmyadmin.image
 
 Run a container from an image
 ==============================
