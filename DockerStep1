@@ -27,6 +27,40 @@ docker ps -a
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 
+----------------------------------------
+* ubuntu   *
+----------------------------------------
+save image to local file
+==========================
+docker save ubuntu > docker.ubuntu.image
+
+docker image load from file
+=============================
+docker image load -i docker.ubuntu.image
+
+Run a container from an image
+==============================
+docker run -i -t -d --name=ubuntu_con ubuntu
+
+Bring container to command TTL
+===============================
+docker exec -it ubuntu_con /bin/bash
+
+-------------------------------
+
+
+----------------------------------------
+* phpmyadmin   *
+----------------------------------------
+Docker mysql phpmyadmin
+========================
+
+1.  docker pull mysql:8.0.1
+2.  docker run --name my-own-mysql -e MYSQL_ROOT_PASSWORD=test -d mysql:8.0.1
+3.  docker pull phpmyadmin/phpmyadmin:latest
+4.  docker run --name my-own-phpmyadmin -d --link my-own-mysql:db -p 8081:80 phpmyadmin/phpmyadmin
+
+
 save image to local file
 ==========================
 docker save ubuntu > docker.ubuntu.image
