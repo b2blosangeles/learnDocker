@@ -66,7 +66,7 @@ save image to local file
 1. mysql 
 docker save mysql > docker.mysql.image
 2. phpmyadmin
-docker save phpmyadmin > docker.mysql.phpmyadmin
+docker save phpmyadmin/phpmyadmin > docker.phpmyadmin.image
 
 docker image load from file
 =============================
