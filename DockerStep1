@@ -35,4 +35,12 @@ docker image load from file
 =============================
 docker image load -i docker.ubuntu.image
 
+Run a container from an image
+==============================
+docker run -i -t -d --name=ubuntu._con ubuntu
+
+Bring container to command TTL
+===============================
+docker exec -it ubuntu._con /bin/bash
+
 -------------------------------
