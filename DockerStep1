@@ -100,3 +100,36 @@ docker save httpd > docker.httpd.image
 run container image to local file
 ========================== 
 docker run -dit --name my-apache-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
+
+
+---------------------------------
+* python
+----------------------------------
+
+Pull docker package
+========================
+docker pull python
+
+save image to local file
+========================== 
+docker save python > docker.python.image
+
+run container 
+========================== 
+
+
+
+---------------------------------
+* node
+----------------------------------
+
+Pull docker package
+========================
+docker pull node
+
+save image to local file
+========================== 
+docker save node > docker.node.image
+
+run container 
+========================== 
