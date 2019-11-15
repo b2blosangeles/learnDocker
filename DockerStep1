@@ -63,11 +63,14 @@ Docker mysql phpmyadmin
 
 save image to local file
 ==========================
-docker save ubuntu > docker.ubuntu.image
+1. mysql 
+docker save mysql > docker.mysql.image
+2. phpmyadmin
+docker save phpmyadmin > docker.mysql.phpmyadmin
 
 docker image load from file
 =============================
-docker image load -i docker.ubuntu.image
+docker image load -i docker.mysql.image
 
 Run a container from an image
 ==============================
