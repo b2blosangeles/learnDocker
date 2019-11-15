@@ -13,3 +13,18 @@ docker run -dit --name myapache -p 8080:80 --mount src="$(pwd)/html",target=/usr
 Bring container to command TTL
 ===============================
 docker exec -it myapache /bin/bash
+
+
+
+Remove all docker images
+=========================
+
+docker rmi $(docker images -q) --force
+
+save image to local file
+==========================
+docker save ubuntu > docker.ubuntu.image
+
+docker image load from file
+=============================
+docker image load -i docker.ubuntu.image
